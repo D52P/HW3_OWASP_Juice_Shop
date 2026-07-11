@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juice Shop Login Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>Juice Shop Login Demo</h1>
+        <p class="subtitle">Client + server validation with optional insecure endpoint for security testing.</p>
+
+        <form id="loginForm" novalidate>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="user@example.com" autocomplete="email" />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="At least 8 characters" autocomplete="current-password" />
+
+          <label class="row">
+            <input id="useInsecure" type="checkbox" />
+            Use intentionally insecure endpoint (for Part 3 testing)
+          </label>
+
+          <button type="submit">Login</button>
+        </form>
+
+        <div id="result" aria-live="polite"></div>
+
+        <details>
+          <summary>Demo credentials</summary>
+          <ul>
+            <li>Secure login: user@example.com / password123</li>
+            <li>Insecure login: admin@juice.local / admin1234</li>
+          </ul>
+        </details>
+      </section>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
